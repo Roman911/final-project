@@ -1,0 +1,105 @@
+@import'./variables.styl';
+
+.nav-bar
+  display flex
+  height 100%
+  justify-content space-between
+  align-items center
+  &__bar
+    box-sizing border-box
+    width 100%
+    background-color alpha($darkGray, .5)
+    height 70px
+  &__logo
+    flex-grow 2
+    margin-left 10px
+    > a
+      font-family Scriptina
+      font-size 1.6rem
+      letter-spacing .3rem
+      color $white
+      &:hover
+        color $lightBrown
+  &__nav
+    flex-grow 8
+    height 100%
+    > ul
+      box-sizing border-box
+      display flex
+      height 100%
+      justify-content space-between
+      align-items center
+      > li
+        color $white
+        > a
+          box-sizing border-box
+          font-family Alegreya-Regular
+          text-transform uppercase
+          font-size .9rem
+          letter-spacing .4rem
+          color $white
+          &:hover
+            color $lightBrown
+  &__control
+    display none
+    &-bar
+      width 20px
+      height 3px
+      margin-top 4px
+      background-color $white
+  &__icons
+    margin-right 10px
+    display flex
+    justify-content flex-end
+    flex-grow 2
+    > a
+      margin-left 20px
+      color $white
+      &:hover
+        color $lightBrown
+
+@media (max-width: $mobile)
+  .nav-bar
+
+    &__bar
+      height 0
+
+    &__control
+      display block
+      position absolute
+      top 30px
+      left 20px
+      z-index 3
+    &__logo
+      margin-left 70px
+      position absolute
+      top 0
+      left 0
+      z-index 3
+      > a
+        font-size 1.7rem
+    &__nav
+      position absolute
+      top 0
+      left 0
+      width 100vw
+      height 100vh
+      background-color $darkGray
+      transform translateX(-100%)
+      transition transform 0.5s
+      z-index 2
+      > ul
+        height 100%
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        > li
+          font-size 1.1rem
+          > a
+            font-size 1.1rem
+    &__icons
+      display none
+
+    .nav-bar__nav.showed
+      transform translateX(0)

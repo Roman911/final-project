@@ -1,0 +1,186 @@
+.fourth-page
+  position relative
+  height 100%
+  background url('./../assets/image/mill.png'), $lightBrown
+  background-position center top 10px, center
+  background-repeat no-repeat
+  background-size auto 120px, auto
+  &__wrapper
+    height 100%
+    background-color alpha($white, .8)
+    .content-item-left
+      height 950px
+      .content-item
+        box-sizing border-box
+        height 100%
+        display flex
+        flex-direction column
+        justify-content space-between
+        align-items center
+        padding 160px 0 50px
+        &__block
+          text-align center
+        &__img_1,
+        &__img_2,
+        &__img_3
+          margin 0 auto
+          background-size cover
+          background-position center
+          width 100px
+          height 100px
+          border none
+          border-radius 50%
+          box-shadow 0 10px 15px 10px alpha($lightGray, .3)
+        &__img_1
+          background-image url('./../assets/image/footer_menu_1.jpg')
+        &__img_2
+          background-image url('./../assets/image/footer_menu_2.jpg')
+        &__img_3
+          background-image url('./../assets/image/footer_menu_3.jpg')
+        &__head
+          > h3
+            margin 20px 0
+            font-family Alegreya-Bold
+            font-size 1.2rem
+            color $darkBrown
+        &__text
+          > p
+            font-family Proxima_Nova-Regular
+            font-size .7rem
+            letter-spacing .1rem
+            color $darkGray
+            line-height 1.2rem
+
+    .content-item-right
+      height 950px
+      .content-item
+        &__head
+          margin 80px 0
+          width 390px
+          font-family Alegreya-Bold
+          > h2
+            font-size 2.5rem
+            color $darkGray
+          > p
+            font-size .8rem
+            text-align center
+            color $darkBrown
+            text-transform uppercase
+        &-block
+          position relative
+          &__img
+            > img
+              box-sizing border-box
+              max-width 100%
+              border 10px solid $white
+          &__button
+            position absolute
+            left 0
+            top 100%
+            transform translate(-12%, -70%)
+            border 1px dashed $lightBrown
+            padding 10px 20px
+            background-color $white
+            font-family Alegreya-Bold
+            font-size 1.2rem
+            color $lightBrown
+            cursor pointer
+            &:hover
+              border 1px dashed $darkBrown
+              color $darkBrown
+          &__column
+            box-sizing border-box
+            position absolute
+            top 0
+            right 0
+            transform translate(-5%, -5%)
+            height 110%
+            width 23%
+            display flex
+            flex-direction column
+            align-items center
+            background url('./../assets/image/field.jpg')
+            background-size 100% 33%
+            background-repeat no-repeat
+            background-position bottom
+          &__box-1,
+          &__box-2,
+          &__box-3
+            height 100%
+            width 100%
+            padding 25px 0
+            display flex
+            flex-direction column
+            justify-content space-between
+            align-items center
+            background-color alpha($white, .7)
+            font-family Alegreya-Bold
+            > h2
+              p
+              color $darkGray
+              line-height 1rem
+            > h3
+              color $darkBrown
+              font-size 1.2rem
+            > h2
+              font-size 3.5rem
+            > p
+              font-size 1rem
+          &__box-2
+            margin-top 1px
+          &__box-3
+            > h2
+              font-size 4.5rem
+              color $lightBrown
+
+@media screen and (max-width: $laptops)
+  .fourth-page
+    .content-item-left
+      height 100%
+    .content-item-right
+      height 100%
+
+@media screen and (max-width: $tablets)
+  .fourth-page
+    .content-item-left
+      order 2
+      height 100%
+      .content-item
+        flex-direction row
+    .content-item-right
+      order 1
+      height 100%
+      .content-item
+        &__head
+          margin 40px 0
+          width auto
+          > h2
+            text-align center
+
+@media screen and (max-width: $mobile)
+  .fourth-page
+    .content-item-left
+      .content-item
+        flex-direction column
+    .content-item-right
+      .content-item
+        &-block
+          &__column
+            transform translate(2%, 20%)
+            height 28%
+            width 104%
+            flex-direction row
+            align-items center
+            background-size 33% 100%
+            background-position bottom right
+          &__box-1,
+          &__box-2,
+          &__box-3
+            padding 0
+
+@media screen and (max-width: $xsMobile)
+  .fourth-page
+    .content-item-right
+      .content-item
+        &__head
+          width auto

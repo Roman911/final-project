@@ -1,0 +1,123 @@
+@import'./variables.styl';
+
+.page-header
+  .content-item
+    &__tittle,
+    &__img,
+    &__text,
+    &__btn {
+      position absolute
+      left 50%
+      transform translateX(-50%)
+      z-index 1 }
+
+.page-header
+  .content-item
+    height 100%
+    &__bg-shadow
+      position absolute
+      top 50%
+      left 50%
+      width 700px
+      height 700px
+      transform translate(-50%, -50%)
+      border-radius 50%
+      background radial-gradient(ellipse at center, alpha($black, .6) 0%, alpha($white, 0) 70%)
+    &__tittle
+      top 29%
+      width 100%
+      > h1
+        font-family PlayfairDisplay
+        letter-spacing 0.5rem
+        font-size 5.3rem
+        text-align center
+        color white
+    &__img
+      top 48%
+    &__text
+      top 56%
+      width 100%
+      > p
+        font-family Proxima_Nova-Regular
+        letter-spacing .2rem
+        line-height 2.2rem
+        color white
+        text-align center
+        font-size 1.3rem
+    &__btn
+      top 71%
+      &_gray
+        box-sizing border-box
+        border none
+        padding 14px 41px
+        background-color alpha($darkGray, .5)
+        font-family Alegreya-Bold
+        font-size 1rem
+        text-transform uppercase
+        letter-spacing .3rem
+        color white
+        cursor pointer
+        &:hover
+          background-color alpha($darkGray, .8)
+          color $lightBrown
+    &__img-bread
+      position absolute
+      top 100%
+      left 50%
+      transform translate(-50%, -50%)
+      z-index 1
+
+@media screen and (max-width: $laptops)
+  .page-header
+    .content-item
+      &__tittle
+        top 31%
+      &__img
+        top 55%
+      &__text
+        top 63%
+      &__btn
+        top 80%
+      &__bg-shadow
+        height 600px
+        width 600px
+
+
+@media screen and (max-width: $tablets)
+  .page-header
+    .content-item
+      &__tittle
+        top 31%
+      &__img
+        top 55%
+      &__text
+        top 63%
+      &__btn
+        top 80%
+      &__bg-shadow
+        height 460px
+        width 460px
+
+@media screen and (max-width: $mobile)
+  .page-header
+    .content-item
+      &__tittle
+        top 20%
+        > h1
+          font-size 4rem
+      &__img
+        top 55%
+      &__text
+        top 63%
+      &__btn
+        top 80%
+      &__bg-shadow
+        height 360px
+        width 360px
+
+@media screen and (max-width: $xsMobile)
+  .page-header
+    .content-item
+      &__bg-shadow
+        height 260px
+        width 260px

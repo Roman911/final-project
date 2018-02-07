@@ -1,0 +1,54 @@
+.footer-page
+  height 100%
+  background-color $lightBrown
+  &__wrapper
+    height 100%
+    background-color alpha($white, .8)
+
+    .content-item-left,
+    .content-item-right
+      height 210px
+      width 100%
+      display flex
+      align-items center
+      .content-item
+        padding 24px 30px
+        width 100%
+        border-top 1px solid $lightGray
+        border-bottom 1px solid $lightGray
+        > ul
+          display flex
+          justify-content space-between
+          > li,
+            a
+            text-transform uppercase
+            font-family Alegreya-Regular
+            color $darkGray
+            font-size .9rem
+            letter-spacing .2rem
+            > a:hover
+              color $lightBrown
+    .content-item-center
+      height 210px
+      width 100%
+      .content-item
+        height 100%
+        width 100%
+        > a
+          height 100%
+          display flex
+          justify-content center
+          align-items center
+          font-family Scriptina
+          font-size 1.8rem
+          letter-spacing .3rem
+          color $darkGray
+          &:hover
+            color $lightBrown
+
+@media screen and (max-width: $tablets)
+  .footer-page
+    .content-item-left,
+    .content-item-right,
+    .content-item-center
+      height 70px

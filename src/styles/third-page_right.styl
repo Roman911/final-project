@@ -1,0 +1,125 @@
+.third-page
+  .page-content
+    .content-item-right
+      box-sizing border-box
+      height 760px
+      position relative
+      .content-item
+        box-sizing border-box
+        height 100%
+        display flex
+        flex-direction column
+        justify-content space-around
+        align-content center
+        padding 50px 0
+        &__window
+          position absolute
+          margin-right 30px
+          top 50%
+          right 0
+          transform translateY(-50%)
+          height 600px
+          width 400px
+          background url('./../assets/image/spica.png'), $lightBrown
+          background-repeat no-repeat
+          background-position right bottom, left top
+          box-shadow 0 10px 15px 10px alpha($black, .4)
+          &_1
+            margin-right 17px
+            height 570px
+            width 350px
+            .content-item__header_line
+              width 100px
+            .content-item__header_img
+              background-image url('./../assets/image/grape.png')
+          &_2
+            margin-right 5px
+            height 550px
+            width 300px
+        &__bg
+          box-sizing border-box
+          width 100%
+          height 100%
+          background-color alpha($white, .9)
+          padding 10px
+        &__border
+          width 100%
+          height 100%
+          border 2px dashed $lightGray
+        &__block
+          box-sizing border-box
+          display flex
+          flex-direction column
+          justify-content space-between
+          align-items center
+          padding 40px 20px 50px
+          width 100%
+          height 100%
+        &__header
+          display flex
+          flex-direction column
+          align-items center
+          &_text
+            width 100%
+            display flex
+            justify-content space-around
+            > p
+              font-family Alegreya-Bold
+              font-size 1rem
+              color $darkGray
+          &_img
+            display flex
+            justify-content center
+            align-items center
+          &_l-circle
+            padding 7px
+            border 1px solid $black
+            border-radius 50%
+          &_b-circle
+            padding 30px
+            border 1px solid $black
+            border-radius 50%
+          &_line
+            width 140px
+            border-bottom 1px solid $black
+          &_img
+            background-repeat no-repeat
+            background-position center
+            z-index -1
+        &__head
+          > h2
+            font-family Alegreya-Bold
+            text-align center
+            font-size 2.8rem
+            color $darkGray
+        &__text
+          > p
+            font-family Proxima_Nova-Regular
+            font-size 1rem
+            text-align center
+            line-height 2rem
+            color $darkGray
+        &__button
+          padding 10px 80px
+          border 1px solid $lightGray
+          font-family Alegreya-Bold
+          font-size 1.2rem
+          color $darkBrown
+          cursor pointer
+          &:hover
+            background-color alpha($lightGray, .2)
+            color $lightBrown
+        .slider__slides
+          &_slide
+            &:nth-child(odd)
+              .content-item__header_img
+                background-image url('./../assets/image/bread_2.png')
+            &:nth-child(even)
+              .content-item__header_img
+                background-image url('./../assets/image/grape.png')
+
+@media screen and (max-width: $mobile)
+  .third-page
+    .page-content
+      .content-item-right
+        display none

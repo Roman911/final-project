@@ -1,0 +1,51 @@
+.first-page
+  .content-item-right
+    height 750px
+    .content-item
+      position relative
+      display flex
+      align-items center
+      height 100%
+      &__img
+        width 100%
+        height auto
+        padding 0 5px
+        &:first-child
+          text-align end
+        > img
+          max-width 100%
+          height auto
+          margin 3px 0
+      &__vector
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        width 247px
+        height 247px
+        > img
+          opacity .95
+        > h3
+          position absolute
+          top 50%
+          left 50%
+          transform translate(-50%, -50%)
+          width 100%
+          font-size 2rem
+          font-family Alegreya-Regular
+          color $lightBrown
+          text-align center
+
+@media screen and (max-width: $tablets)
+  .first-page
+    .content-item-right
+      height 675px
+@media screen and (max-width: $mobile)
+  .first-page
+    .content-item-right
+      height 650px
+
+@media screen and (max-width: $xsMobile)
+  .first-page
+    .content-item-right
+      display none
